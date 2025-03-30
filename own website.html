@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: lightgray;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: black;
+            color: white;
+            padding: 15px 0;
+            font-size: 24px;
+        }
+        section {
+            padding: 20px;
+        }
+        button {
+            background: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        footer {
+            background: black;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        nav {
+            background: dimgray;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+        .content-section {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: white;
+        }
+        #insta-link {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            background: purple;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to My Website
+    </header>
+    <nav>
+        <a onclick="showSection('contact-info')">Contact</a>
+        <a onclick="showSection('address-info')">Address</a>
+        <a onclick="showSection('projects-info')">Projects</a>
+        <a onclick="showSection('certificates-info')">Certificates</a>
+        <a href="https://www.instagram.com/bhargav_034 target="_blank" id="insta-link">Instagram</a>
+    </nav>
+    
+    <section id="contact">
+        <div id="contact-info" class="content-section">
+            <h2>Contact Me</h2>
+            <p><strong>Name:</strong> Bhargav</p>
+            <p><strong>Phone:</strong> 8142508125</p>
+            <p><strong>Email:</strong> <a href="mailto:bhargavbhukya77@gmail.com">bhargavbhukya77@gmail.com</a></p>
+        </div>
+
+        <div id="address-info" class="content-section">
+            <h2>Address</h2>
+            <p><strong>Location:</strong> Vijayawada</p>
+        </div>
+
+        <div id="projects-info" class="content-section">
+            <h2>My Projects</h2>
+            <ul>
+                <li><strong>Project 1:</strong> Portfolio Website</li>
+                <li><strong>Project 2:</strong> E-commerce Site</li>
+                <li><strong>Project 3:</strong> Chatbot Development</li>
+            </ul>
+        </div>
+
+        <div id="certificates-info" class="content-section">
+            <h2>Certificates</h2>
+            <ul>
+                <li>Web Development - Udemy</li>
+                <li>Python Programming - Coursera</li>
+                <li>AI & ML Basics - Google</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Bhargav's Personal Website
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.content-section');
+            sections.forEach(function(section) {
+                section.style.display = "none";
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = "block";
+        }
+    </script>
+</body>
+</html>
